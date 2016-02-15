@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/main_background_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/split_data_scroll_view"
+        android:layout_gravity="center_horizontal"
+        style="@style/screen_scroll_view_style">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:text="@string/split_data_header_text"
+                android:id="@+id/split_data_header_text_view"
+                style="@style/header_style" />
+
+            <View style="@style/Divider"
+                android:id="@+id/split_data_header_divider_1" />
+
+            <TextView
+                style="@style/subheader_style"
+                android:text="@string/split_data_string_subheader_text"
+                android:id="@+id/split_data_string_subheader_text_view" />
+
+            <View style="@style/Divider"
+                android:id="@+id/split_data_header_divider_2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/split_string_check_box"
+                    style="@style/check_button_style" />
+
+                <EditText
+                    android:id="@+id/split_data_string_text_edit"
+                    style="@style/text_edit_style"
+                    android:text="@string/split_data_default_string" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/subheader_style"
+                android:text="@string/split_data_file_subheader_text"
+                android:id="@+id/split_data_file_subheader_text_view" />
+
+            <View style="@style/Divider"
+                android:id="@+id/split_data_header_divider_3" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    style="@style/check_button_style"
+                    android:id="@+id/split_data_file_check_box"
+                    android:checked="false" />
+
+                <EditText
+                    android:id="@+id/split_data_file_text_edit"
+                    style="@style/text_edit_style" />
+            </LinearLayout>
+
+            <Button
+                android:text="@string/split_data_open_file_button_text"
+                android:id="@+id/split_data_open_file_button"
+                style="@style/small_button_style" />
+
+            <Button
+                android:text="@string/split_data_split_button_text"
+                android:id="@+id/split_data_split_button"
+                style="@style/big_button_style" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
